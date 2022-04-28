@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { TutteComponent } from './tutte/tutte.component';
 import { OffertaComponent } from './offerta/offerta.component';
 import { ContattiComponent } from './contatti/contatti.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContattiComponent } from './contatti/contatti.component';
     HomeComponent,
     TutteComponent,
     OffertaComponent,
-    ContattiComponent
+    ContattiComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
