@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { formService } from './form.service';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  yachts = []
+
+  constructor(private formService: formService) { }
 
   ngOnInit(): void {
   }
+
+  creaYacht(dataYacht: {nome: string, modello: string, capienza: number, prezzo: number, descrizione: string, immagine: string}, mioForm){
+    this.formService.addYacht(dataYacht.nome, dataYacht.modello, dataYacht.capienza, dataYacht.prezzo, dataYacht.descrizione, dataYacht.immagine);
+    this.clearFilters(mioForm);
+  }
+
+
+clearFilters(mioForm: NgForm) {
+  mioForm.reset()  
+}
+
+
 
 }

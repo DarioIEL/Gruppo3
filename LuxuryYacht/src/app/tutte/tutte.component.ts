@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { formService } from '../form/form.service';
 
 @Component({
   selector: 'app-tutte',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tutte.component.css']
 })
 export class TutteComponent implements OnInit {
+  
+  yachts = [];
 
-  constructor() { }
+  constructor(private formService: formService) { }
 
   ngOnInit(): void {
+    this.formService.getYacht().subscribe(data => {
+      this.yachts = data;
+    })
   }
 
 }

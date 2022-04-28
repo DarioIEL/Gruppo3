@@ -1,1 +1,30 @@
-<p>form works!</p>
+
+<form #yachtForm="ngForm" (ngSubmit)="creaYacht(yachtForm.value, yachtForm)"  name="filterName">
+    <div class="input-group flex-nowrap py-2">
+        <span class="input-group-text lung" id="addon-wrapping"><i class="fa-solid fa-t"></i></span>
+        <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="nome">
+        <span class="input-group-text ms-5 lung" id="addon-wrapping"><i class="fa-solid fa-s"></i></span>
+        <input type="text" class="form-control" placeholder="Modello" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="modello">
+    </div>
+    <div class="input-group flex-nowrap py-2">
+        <span class="input-group-text lung" id="addon-wrapping"><i class="fa-solid fa-g"></i></span>
+        <input type="text" class="form-control" placeholder="Capienza" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="capienza">
+        <span class="input-group-text ms-5 lung" id="addon-wrapping"><i class="fa-solid fa-p"></i></span>
+        <input type="text" class="form-control" placeholder="Prezzo giornaliero" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="prezzo">
+    </div>
+    <div class="input-group py-2">
+        <span class="input-group-text">Descrizione</span>
+        <textarea class="form-control" aria-label="With textarea" style="resize: none;" rows="3" required ngModel name="descrizione"></textarea>
+    </div>
+
+    <div class="input-group py-2">
+        <span class="input-group-text">Immagine</span>
+        <input type="text" class="form-control" placeholder="Inserisci l'URL dell'immagine" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="immagine">
+    </div>
+
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-secondary" [disabled]="!yachtForm.valid">AGGIUNGI
+      
+        </button>
+    </div>
+</form>
