@@ -12,6 +12,8 @@ import { OffertaComponent } from './offerta/offerta.component';
 import { ContattiComponent } from './contatti/contatti.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { ModCardComponent } from './mod-card/mod-card.component';
+import { NoleggioComponent } from './noleggio/noleggio.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     TutteComponent,
     OffertaComponent,
     ContattiComponent,
-    FormComponent
+    FormComponent,
+    ModCardComponent,
+    NoleggioComponent
   ],
   imports: [
     BrowserModule,
