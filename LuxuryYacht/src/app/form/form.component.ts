@@ -16,8 +16,8 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  creaYacht(dataYacht: {nome: string, modello: string, capienza: number, prezzo: number, descrizione: string, immagine: string}, mioForm){
-    this.formService.addYacht(dataYacht.nome, dataYacht.modello, dataYacht.capienza, dataYacht.prezzo, dataYacht.descrizione, dataYacht.immagine);
+  creaYacht(dataYacht: {nome: string, modello: string, capienza: number, prezzo: number, descrizione: string, immagine: string, offerta: string}, mioForm){
+    this.formService.addYacht(dataYacht.nome, dataYacht.modello, dataYacht.capienza, dataYacht.prezzo, dataYacht.descrizione, dataYacht.immagine, dataYacht.offerta);
     this.clearFilters(mioForm);
   }
 

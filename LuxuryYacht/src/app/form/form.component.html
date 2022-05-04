@@ -22,6 +22,11 @@
         <input type="text" class="form-control" placeholder="Inserisci l'URL dell'immagine" aria-label="Username" aria-describedby="addon-wrapping" required ngModel name="immagine">
     </div>
 
+    <div class="input-group py-2">
+        <span class="input-group-text">Offerta</span>
+        <input type="text" class="form-control" placeholder="E' in offerta? Si o No" aria-label="offerta" aria-describedby="addon-wrapping" required ngModel name="offerta">
+    </div>
+
     <div class="text-center mt-4">
         <button type="submit" class="btn btn-secondary" [disabled]="!yachtForm.valid">AGGIUNGI
       

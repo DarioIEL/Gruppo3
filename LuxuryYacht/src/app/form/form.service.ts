@@ -14,8 +14,8 @@ export class formService{
 	constructor(private http: HttpClient) {
 	}
 
-    addYacht(nome: string, modello: string, capienza: number, prezzo: number, descrizione: string, immagine: string){
-        const dataYacht: Yacht = {nome: nome, modello: modello, capienza: capienza, prezzo: prezzo, descrizione: descrizione, immagine: immagine}
+    addYacht(nome: string, modello: string, capienza: number, prezzo: number, descrizione: string, immagine: string, offerta: string){
+        const dataYacht: Yacht = {nome: nome, modello: modello, capienza: capienza, prezzo: prezzo, descrizione: descrizione, immagine: immagine, offerta: offerta}
 
         this.http.post(
             "https://luxuryyacht-59154-default-rtdb.europe-west1.firebasedatabase.app/yacht.json",

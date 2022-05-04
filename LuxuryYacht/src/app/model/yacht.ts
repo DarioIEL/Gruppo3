@@ -5,5 +5,6 @@ export class Yacht{
     prezzo: number;
     descrizione: string;
     immagine: string;
+    offerta: string;
     key?: string;
 }
