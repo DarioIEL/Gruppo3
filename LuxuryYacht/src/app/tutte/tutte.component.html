@@ -1,23 +1,44 @@
 <h2>Tutte le navi</h2>
-<div class="card mb-3" style="max-width: 540px;" *ngFor="let data of yachts">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="{{data.immagine}}" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-4">
-      <div class="card-body">
-        <h5 class="card-title">Nome: {{data.nome}}</h5>
-        <p class="card-text">Modello: {{data.modello}} </p>
-        <p class="card-text">Descrizione: {{data.descrizione}}</p>
-        <p class="card-text">Capienza: {{data.capienza}}</p>
-        <p class="card-text">Prezzo: {{data.prezzo}}</p>
+<div class="container-fluid" *ngFor="let data of yachts">
+  <div class="card mb-3" style="width: 100%">
+    <div class="row g-0">
+      <div class="col-md-6 border-dark">
+        <img src="{{data.immagine}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h5 class="card-title">Nome: {{data.nome}}</h5>
+          <p class="card-text">Modello: {{data.modello}} </p>
+          <p class="card-text">Descrizione: {{data.descrizione}}</p>
+          <p class="card-text">Capienza: {{data.capienza}}</p>
+          <p class="card-text">Prezzo: {{data.prezzo}}</p>
+        </div>
+        <div>
+        <a routerLink="/noleggio"><button class="btn btn-success">Noleggia</button></a>
+        <button class="btn btn-danger">Elimina</button>
+      </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <button class="btn btn-success">Noleggia</button>
-      <button class="btn btn-primary">Modifica</button>
-      <button class="btn btn-danger">Elimina</button>
-    </div>
+    <div class="row g-1">
+    <div class="col-md-12">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Modifica
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <button class="btn btn-primary" (click)="modYacht()">Modifica</button><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+    </div>
   </div>
-</div>
+  <router-outlet></router-outlet>

@@ -15,8 +15,8 @@ const routes: Routes = [
   //tutte
   {path: 'tutte',component: TutteComponent, children: [
   {path: 'modifica', component: ModCardComponent},
-  {path: 'noleggio', component: NoleggioComponent}
-  ]},
+]},
+  {path: 'noleggio', component: NoleggioComponent},
 
   //contatti
   {path: 'contatti',component: ContattiComponent},

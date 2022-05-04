@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { formService } from '../form/form.service';
 
 @Component({
@@ -10,12 +11,19 @@ export class TutteComponent implements OnInit {
   
   yachts = [];
 
-  constructor(private formService: formService) { }
+  constructor(private formService: formService,
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.formService.getYacht().subscribe(data => {
       this.yachts = data;
     })
   }
+  
+  modYacht(){
+    this.router.navigate(['modifica'],{relativeTo: this.route})
+  }
+  
 
 }
