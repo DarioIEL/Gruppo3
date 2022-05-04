@@ -26,6 +26,18 @@ export class formService{
         })
     }
 
+//se si clicca su modifica cancella tutto e rimane solo il record inserito
+
+    // modYatch(nome: string, modello: string, capienza: number, prezzo: number, descrizione: string, immagine: string, offerta: string){
+    //     const dataYacht: Yacht = {nome: nome, modello: modello, capienza: capienza, prezzo: prezzo, descrizione: descrizione, immagine: immagine, offerta: offerta}
+
+    //     this.http.put("https://luxuryyacht-59154-default-rtdb.europe-west1.firebasedatabase.app/yacht.json/id",
+    //     dataYacht).subscribe(yacht =>{
+    //         console.log(yacht);
+            
+    //     })
+    // }
+
     getYacht(){
         return this.http
         .get('https://luxuryyacht-59154-default-rtdb.europe-west1.firebasedatabase.app/yacht.json')
@@ -47,5 +59,7 @@ export class formService{
     //     })
 
     // }
+
+    
 
 }

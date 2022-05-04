@@ -20,19 +20,18 @@
       </div>
     </div>
     <div class="row g-1">
-    <div class="col-md-12">
-        <div class="accordion" id="accordionExample">
+    <div class="col-12">
+        <div class="accordion" id="{{data.nome}}">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
+            <h2 class="accordion-header" id="{{data.nome}}">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                 aria-expanded="true" aria-controls="collapseOne">
                 Modifica
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"data-bs-parent="#{{data.nome}}">
               <div class="accordion-body">
-                <button class="btn btn-primary" (click)="modYacht()">Modifica</button><br>
+                <app-mod-card></app-mod-card>
               </div>
             </div>
           </div>

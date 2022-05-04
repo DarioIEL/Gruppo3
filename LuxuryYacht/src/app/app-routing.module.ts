@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContattiComponent } from './contatti/contatti.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
-import { ModCardComponent } from './mod-card/mod-card.component';
+
 import { NoleggioComponent } from './noleggio/noleggio.component';
 import { OffertaComponent } from './offerta/offerta.component';
 import { TutteComponent } from './tutte/tutte.component';
@@ -13,9 +13,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
 
   //tutte
-  {path: 'tutte',component: TutteComponent, children: [
-  {path: 'modifica', component: ModCardComponent},
-]},
+  {path: 'tutte',component: TutteComponent},
   {path: 'noleggio', component: NoleggioComponent},
 
   //contatti
