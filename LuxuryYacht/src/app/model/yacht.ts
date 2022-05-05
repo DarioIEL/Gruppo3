@@ -7,4 +7,5 @@ export class Yacht{
     immagine: string;
     offerta: string;
     key?: string;
+    id?: string;
 }
