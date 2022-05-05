@@ -1,10 +1,11 @@
 <h2>Home</h2>
-<div class="card mb-3" style="max-width: 540px;" *ngFor="let data of yachts">
+<div class="container-fluid" *ngFor="let data of yachts">
+  <div class="card mb-3" style="width: 100%">
     <div class="row g-0">
-      <div class="col-md-4">
+      <div class="col-md-6 border-dark">
         <img src="{{data.immagine}}" class="img-fluid rounded-start" alt="...">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-6">
         <div class="card-body">
           <h5 class="card-title">Nome: {{data.nome}}</h5>
           <p class="card-text">Modello: {{data.modello}} </p>
@@ -15,3 +16,4 @@
       </div>
     </div>
   </div>
+</div>
