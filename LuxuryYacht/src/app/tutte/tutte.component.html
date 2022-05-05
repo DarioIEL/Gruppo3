@@ -2,6 +2,7 @@
 <div class="container-fluid" *ngFor="let data of yachts">
   <div class="card mb-3" style="width: 100%">
     <div class="row g-0">
+
       <div class="col-md-6 border-dark">
         <img src="{{data.immagine}}" class="img-fluid rounded-start" alt="...">
       </div>
@@ -14,30 +15,12 @@
           <p class="card-text">Prezzo: {{data.prezzo}}</p>
         </div>
         <div>
-        <a routerLink="/noleggio"><button class="btn btn-success">Noleggia</button></a>
-        <button class="btn btn-danger">Elimina</button>
-      </div>
-      </div>
-    </div>
-    <div class="row g-1">
-    <div class="col-12">
-        <div class="accordion" id="{{data.nome}}">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="{{data.nome}}">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-                Modifica
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"data-bs-parent="#{{data.nome}}">
-              <div class="accordion-body">
-                <app-mod-card></app-mod-card>
-              </div>
-            </div>
-          </div>
+          <a routerLink="/noleggio"><button class="btn btn-success">Noleggia</button></a>
+          <button class="btn btn-danger">Elimina</button>
         </div>
       </div>
-
     </div>
+    
   </div>
-  <router-outlet></router-outlet>
+
+</div>

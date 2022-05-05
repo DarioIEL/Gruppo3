@@ -21,9 +21,7 @@ export class TutteComponent implements OnInit {
     })
   }
   
-  modYacht(){
-    this.router.navigate(['modifica'],{relativeTo: this.route})
-  }
+  
   
 
 }
