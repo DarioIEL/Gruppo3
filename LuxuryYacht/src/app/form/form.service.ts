@@ -43,7 +43,7 @@ export class formService{
         .get('https://luxuryyacht-59154-default-rtdb.europe-west1.firebasedatabase.app/yacht.json')
         .pipe(map(response =>{
             const yachts: Yacht[] = [];
-            // console.log(response);
+            console.log(response);
             
             for(let key in response){
                 yachts.push(response[key]);

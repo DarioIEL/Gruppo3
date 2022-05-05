@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { formService } from '../form/form.service';
+import { Yacht } from '../model/yacht';
 
 @Component({
   selector: 'app-tutte',
@@ -12,14 +14,15 @@ export class TutteComponent implements OnInit {
   yachts = [];
 
   constructor(private formService: formService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+              private http: HttpClient) { }
 
   ngOnInit(): void {
     this.formService.getYacht().subscribe(data => {
       this.yachts = data;
     })
   }
+
+  
   
   
   

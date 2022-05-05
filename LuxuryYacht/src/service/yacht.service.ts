@@ -36,6 +36,10 @@ getOfferta(){
     ))
 }
 
+delY(data: Yacht){
+    this.http.delete('https://luxuryyacht-59154-default-rtdb.europe-west1.firebasedatabase.app/yacht.json')
+}
+
 
 }
 
