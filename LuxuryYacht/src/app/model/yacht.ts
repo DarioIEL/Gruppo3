@@ -6,6 +6,5 @@ export class Yacht{
     descrizione: string;
     immagine: string;
     offerta: string;
-    key?: string;
     id?: string;
 }
