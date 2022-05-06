@@ -80,21 +80,5 @@ export class yachtService {
 
 
 
-  // getViaggi(){
-  //     return this.http
-  //            .get< {[key: string]: Viaggi} > ('https://viaggitss-default-rtdb.europe-west1.firebasedatabase.app/mieiViaggi.json')
-  //            .pipe(map(responseData => {
-  //              const viaggiArray: Viaggi[] = [];
-
-  //              for(let key in responseData){
-  //                if(responseData.hasOwnProperty(key)){
-  //                feedArray.push({...responseData[key], id: key});
-  //                }
-  //              }
-  //              return viaggiArray
-  //            }))
-  //  }
-
-
 
 }
