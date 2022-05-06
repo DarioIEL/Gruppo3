@@ -64,12 +64,18 @@ export class yachtService {
               id: key
             });
           }
-          console.log(yachtArray);
+          
         }
 
         return yachtArray;
         
       }))
+  }
+
+
+  deleteYacht(id: string){
+    return  this.http.delete('https://luxuryyacht-59154-default-rtdb.europe-west1.firebasedatabase.app/yacht/' + id + '.json')
+          
   }
 
 

@@ -2,21 +2,22 @@
 <div class="container-fluid" *ngFor="let data of yachts">
   <div class="card mb-3" style="height: 400px;">
     <div class="row g-0">
-      <div class="col-md-6 border-dark" style="height: 100%;">
+      <div class="col-md-6 border-dark" style="height: 90%;">
         <img src="{{data.immagine}}" class="img-fluid rounded-start" alt="..." style="height: 400px; width: 100%;">
       </div>
       <div class="col-md-6">
         <div class="card-body">
           <h5 class="card-title">Nome: {{data.nome}}</h5>
           <p class="card-text">Modello: {{data.modello}} </p>
-          <p class="card-text">Descrizione: {{data.descrizione}}</p>
+          <textarea name="" id="" cols="80" rows="5">{{data.descrizione}}</textarea>
+          <!-- <p class="card-text">Descrizione: {{data.descrizione}}</p> -->
           <p class="card-text">Capienza: {{data.capienza}}</p>
           <p class="card-text">Prezzo: {{data.prezzo}}</p>
-        </div>
-        <div>
-          <a routerLink="/noleggio"><button class="btn btn-success">Noleggia</button></a>
-          <button class="btn btn-dark">Modifica</button>
-          <button class="btn btn-danger" (click)="deleteY(this.data)">Elimina</button>
+          <div>
+            <a routerLink="/noleggio"><button class="btn btn-success">Noleggia</button></a>
+            <button class="btn btn-dark">Modifica</button>
+            <button class="btn btn-danger" (click)="onDeleteYacht(data.id)">Elimina</button>
+          </div>
         </div>
       </div>
     </div>
